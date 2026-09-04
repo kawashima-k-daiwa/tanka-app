@@ -45,8 +45,6 @@ export function AuthProvider({ children }) {
 
       setStatus('loading')
 
-      // NOTE: employees テーブルの実際のカラム名(メールアドレス列の名称など)は
-      // 予算管理システム側で未確定のため、Uedaに確認後に調整してください。
       const { data, error } = await supabase
         .from('employees')
         .select('*')

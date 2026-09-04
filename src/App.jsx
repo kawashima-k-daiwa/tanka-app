@@ -2,6 +2,8 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { AuthProvider, useAuth } from './lib/AuthContext'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import PriceList from './pages/PriceList'
+import PriceComparison from './pages/PriceComparison'
 
 function RequireEmployee({ children }) {
   const { status } = useAuth()
@@ -31,6 +33,22 @@ function AppRoutes() {
         element={
           <RequireEmployee>
             <Dashboard />
+          </RequireEmployee>
+        }
+      />
+      <Route
+        path="/prices"
+        element={
+          <RequireEmployee>
+            <PriceList />
+          </RequireEmployee>
+        }
+      />
+      <Route
+        path="/prices/compare"
+        element={
+          <RequireEmployee>
+            <PriceComparison />
           </RequireEmployee>
         }
       />

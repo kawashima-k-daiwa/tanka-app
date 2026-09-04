@@ -113,3 +113,199 @@ body {
 .dashboard-main {
   padding: 24px;
 }
+
+.primary-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #1a73e8;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.price-list-page {
+  padding: 24px;
+}
+
+.price-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.price-list-header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.price-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.price-tabs a {
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #555;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.price-tabs a.active {
+  color: #1a73e8;
+  border-bottom-color: #1a73e8;
+  font-weight: 600;
+}
+
+.warning-message {
+  font-size: 12px;
+  color: #b26a00;
+  background: #fff7e6;
+  border: 1px solid #ffe0a3;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.price-table tr.cheapest {
+  background: #e8f5e9;
+  font-weight: 600;
+}
+
+.price-table td.suspect {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.price-table .badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  background: #2e7d32;
+  border-radius: 3px;
+}
+
+.pivot-table-wrap {
+  /* overflow-x だけを指定すると overflow-y が auto に化けてスクロールコンテナが
+     table の高さぴったりになり、sticky なヘッダーが機能しなくなるため、
+     縦横とも明示的に auto にして高さを画面内に収める */
+  overflow: auto;
+  max-height: calc(100vh - 260px);
+}
+
+.pivot-table th,
+.pivot-table td {
+  white-space: nowrap;
+}
+
+.pivot-table td.num.cheapest {
+  background: #e8f5e9;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.price-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.price-filters input[type='text'] {
+  padding: 8px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 13px;
+  min-width: 140px;
+}
+
+.date-field {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #555;
+}
+
+.date-field input {
+  padding: 6px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.price-filters button {
+  padding: 8px 16px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.price-list-note {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 13px;
+}
+
+.price-table th,
+.price-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.price-table th {
+  background: #f5f6f8;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.price-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.price-table td.num {
+  text-align: right;
+}
+
+.price-pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.price-pagination button {
+  padding: 6px 14px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.price-pagination button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

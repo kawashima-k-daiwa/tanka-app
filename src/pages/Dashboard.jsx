@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useAuth } from '../lib/AuthContext'
 
 export default function Dashboard() {
@@ -16,9 +17,9 @@ export default function Dashboard() {
       </header>
 
       <main className="dashboard-main">
-        <p>
-          単価表本体の画面は、共有の請求書テーブル構成が確定次第、実装予定です。
-        </p>
+        <Link to="/prices" className="primary-link">
+          単価表を見る
+        </Link>
       </main>
     </div>
   )
